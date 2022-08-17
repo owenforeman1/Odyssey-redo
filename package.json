@@ -1,0 +1,19 @@
+{
+  "name": "odyssy-redo",
+  "version": "1.0.0",
+  "description": "pee poo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owenforeman1/Odyssy-redo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/owenforeman1/Odyssy-redo/issues"
+  },
+  "homepage": "https://github.com/owenforeman1/Odyssy-redo#readme"
+}

@@ -1,0 +1,108 @@
+header {
+  text-rendering: optimizeLegibility;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 1em;
+    text-transform: uppercase;
+      font-family: ambroise-std;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 28px;
+        letter-spacing: 0em;
+        line-height: 1.4em;
+        text-transform: none;
+        color: #000;
+    padding: 8px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0em;
+  line-height: 1.6em;
+  font-family: proxima-nova;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  letter-spacing: .025em;
+  line-height: 2.2em;
+  text-transform: none;
+  color: #000014;
+  margin: 0px;
+  border-left: 50px;
+  border-right: 50px;
+  border: solid;
+  border-color: #478547;
+}
+
+.toppage {
+padding-left: 12px;
+padding-right: 12px;
+padding-top: 8px;
+padding-bottom: 8px;
+}
+
+.page {
+padding: 20px;
+border: 50px solid #abb9e8;
+}
+
+.infopage {
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+.pagetwo {
+  padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h1 {
+        font-family: ambroise-std;
+          font-weight: 700;
+          font-style: normal;
+              line-height: .9em;
+                text-transform: uppercase;
+              
+  text-align: center;
+  white-space: pre-wrap;
+  text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-thickness: 1px;
+    font-size: 85px;
+}
+
+h2 {
+  text-align: center;
+    white-space: pre-wrap;
+      text-transform: uppercase;
+      text-decoration: underline;
+      text-underline-position: under;
+      text-decoration-thickness: 1px;
+      font-family: din-condensed-web;
+      font-size: 22px;
+}
+
+h3 {
+  font-family: din-condensed-web;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 22px;
+    letter-spacing: .12em;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    white-space: pre-wrap;
+      color: #000;
+              padding-bottom: 17px;
+}
+
+h1 a:visited{
+  color: inherit;
+}
+h2 a:visited{
+  color: inherit;
+}
