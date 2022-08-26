@@ -57,19 +57,18 @@ border: 50px solid #abb9e8;
 }
 
 h1 {
-        font-family: ambroise-std;
-          font-weight: 700;
-          font-style: normal;
-              line-height: .9em;
-                text-transform: uppercase;
-              
-  text-align: center;
-  white-space: pre-wrap;
-  text-transform: uppercase;
-    text-decoration: underline;
-    text-underline-position: under;
-    text-decoration-thickness: 1px;
-    font-size: 85px;
+font-family: ambroise-std;
+font-weight: 700;
+font-style: normal;
+line-height: .9em;
+text-transform: uppercase;            
+text-align: center;
+white-space: pre-wrap;
+text-transform: uppercase;
+text-decoration: underline;
+text-underline-position: under;
+text-decoration-thickness: 1px;
+font-size: 85px;
 }
 
 h2 {
@@ -112,12 +111,37 @@ h1 a:hover{
     color: black;
   cursor: pointer;
 }
+/* 
+h2 a:hover {
+  box-shadow: inset 700px 0 0 0 #54b3d6;
+  color: black;
+  cursor: pointer;
+} */
 
 h2 a:visited{
   background-color: rgb(25, 0, 255);
   color: inherit;
 }
 
-ul button {
+#waveform {
+  border: 1px solid black;
+  position: fixed;
+  width: 75%;
+}
+
+#waveform :hover{
+  box-shadow: inset 760px 0 0 0 #54b3d6;
+    color: black;
+    transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+    cursor: pointer;
+}
+
+.buttonStyle {
+  display: block;
+    margin: 5px;
+    width: 25%;
+}
+
+#nameList {
   display: block;
 }

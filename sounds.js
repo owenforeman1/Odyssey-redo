@@ -160,17 +160,11 @@ let sounds = [
   "./public/Zeus.mp3",
 ];
 
-var wavesurfer = WaveSurfer.create({
-  container: "#waveform",
-  waveColor: "violet",
-  progressColor: "purple",
-});
-
-wavesurfer.on("ready", function () {
-  wavesurfer.play();
-});
-
 var nameList = document.querySelector("#nameList");
+// var aNames = document.querySelector("#aNames");
+// var cNames = document.querySelector("#cNames");
+// var iNames = document.querySelector("#iNames");
+// var pNames = document.querySelector("#pNames");
 
 var nameArray = [];
 var soundArray = [];
@@ -193,23 +187,42 @@ function displayNames() {
     soundArray.push(element);
   }
   for (let index = 0; index < nameArray.length; index++) {
-    const odyNames = nameArray[index];
+    const odyName = nameArray[index];
     const soundLink = soundArray[index];
     var button = document.createElement("button");
-    button.textContent = odyNames;
+    button.setAttribute("id", odyName);
+    button.classList.add("buttonStyle");
+    button.textContent = odyName;
     button.onclick = function (event) {
       console.log(event);
       console.log(soundLink);
-      buttonTing(soundLink);
+      buttonClick(soundLink, odyName);
     };
     button.setAttribute("data-index", index);
     nameList.appendChild(button);
-    console.log(odyNames);
+    console.log(odyName);
   }
 }
+//need anchor links for a-c c-i i-p p-z
+//for loop needs to put buttons in right sections
 
-function buttonTing(soundUrl) {
+function buttonClick(soundUrl, buttonName) {
   // var a = new Audio(soundUrl);
+  let wavesurfer = WaveSurfer.create({
+    container: document.querySelector(`#${buttonName}`),
+    barWidth: 2,
+    barHeight: 1, // the height of the wave
+    barGap: null, // the optional spacing between bars of the wave, if not provided will be calculated in legacy format
+  });
+
+  wavesurfer.on("finish", function () {
+    wavesurfer.destroy();
+  });
+
+  wavesurfer.on("ready", function () {
+    wavesurfer.play();
+  });
+
   wavesurfer.load(soundUrl);
   // a.play();
 }
