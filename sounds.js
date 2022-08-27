@@ -160,11 +160,9 @@ let sounds = [
   "./public/Zeus.mp3",
 ];
 
+let currentWaveSurfer;
+
 var nameList = document.querySelector("#nameList");
-// var aNames = document.querySelector("#aNames");
-// var cNames = document.querySelector("#cNames");
-// var iNames = document.querySelector("#iNames");
-// var pNames = document.querySelector("#pNames");
 
 var nameArray = [];
 var soundArray = [];
@@ -194,8 +192,6 @@ function displayNames() {
     button.classList.add("buttonStyle");
     button.textContent = odyName;
     button.onclick = function (event) {
-      console.log(event);
-      console.log(soundLink);
       buttonClick(soundLink, odyName);
     };
     button.setAttribute("data-index", index);
@@ -208,23 +204,33 @@ function displayNames() {
 
 function buttonClick(soundUrl, buttonName) {
   // var a = new Audio(soundUrl);
+  if (currentWaveSurfer) {
+    currentWaveSurfer.destroy();
+    document.querySelector("wave")?.remove();
+  }
+
   let wavesurfer = WaveSurfer.create({
     container: document.querySelector(`#${buttonName}`),
-    barWidth: 2,
-    barHeight: 1, // the height of the wave
-    barGap: null, // the optional spacing between bars of the wave, if not provided will be calculated in legacy format
+    barWidth: 3,
+    barHeight: 2,
+    barGap: null,
   });
 
   wavesurfer.on("finish", function () {
-    wavesurfer.destroy();
+    //wavesurfer.destroy();
   });
 
   wavesurfer.on("ready", function () {
+    // wavesurfer.pause();
     wavesurfer.play();
   });
 
+  wavesurfer.on("click", function () {
+    // wavesurfer.pause();
+    console.log("clicked");
+  });
   wavesurfer.load(soundUrl);
-  // a.play();
+  currentWaveSurfer = wavesurfer;
 }
 
 function onLoad() {
