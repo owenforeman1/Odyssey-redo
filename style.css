@@ -1,27 +1,33 @@
 header {
   text-rendering: optimizeLegibility;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    font-size: 27px;
-    line-height: 1em;
-    text-transform: uppercase;
-      font-family: ambroise-std;
-        font-weight: 900;
-        font-style: normal;
-        font-size: 28px;
-        letter-spacing: 0em;
-        line-height: 1.4em;
-        text-transform: none;
-        color: #000;
-    padding: 8px;
+  font-family: 'Darcy', Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 1em;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 28px;
+  letter-spacing: 0em;
+  line-height: 1.4em;
+  text-transform: none;
+  color: #000;
+  padding: 8px;
+}
+
+
+@font-face { 
+  font-family: 'Darcy';
+  src: url('public/fonts/mrdarcy.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Darcy', Helvetica, sans-serif;
   font-size: 16px;
   letter-spacing: 0em;
   line-height: 1.6em;
-  font-family: proxima-nova;
   font-weight: 400;
   font-style: normal;
   font-size: 22px;
@@ -31,6 +37,7 @@ body {
   color: #000014;
   margin: 0px;
   text-align: center;
+  background-image: url('public/images/paperbackground.png');
 }
 
 .toppage {
@@ -65,7 +72,7 @@ border: 50px solid #abb9e8;
 }
 
 h1 {
-font-family: ambroise-std;
+font-family: 'Darcy', Helvetica, sans-serif;
 font-weight: 700;
 font-style: normal;
 line-height: .9em;
@@ -86,12 +93,10 @@ h2 {
       text-decoration: underline;
       text-underline-position: under;
       text-decoration-thickness: 1px;
-      font-family: din-condensed-web;
       font-size: 22px;
 }
 
 h3 {
-  font-family: din-condensed-web;
     font-weight: 300;
     font-style: normal;
     font-size: 22px;
@@ -161,11 +166,15 @@ h2 a:visited{
     cursor: pointer;
 }
 
+/* we use !important to override waveform's inline styles */
 wave {
   height: 50px;
   overflow: hidden!important;
   pointer-events: none;
   opacity: 75%;
+}
+wave wave {
+  position: absolute !important;
 }
 
 wave canvas{
@@ -176,13 +185,23 @@ wave wave canvas{
   display: block;
 }
 
+.waveholder {
+  position: absolute;
+left: 0;
+top: 17%;
+width: 100%;
+}
+
 .buttonStyle {
   display: block;
-    width: 100%;
-    height: 80px;
-    margin-bottom: 20px;
-    background-color: rgb(255, 212, 102);
-    font-weight: bold;
+  width: 100%;
+  height: 80px;
+  margin-bottom: 20px;
+  position: relative;
+  background-color: rgb(255, 212, 102);
+  font-weight: bold;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
 }
 
 #nameList {

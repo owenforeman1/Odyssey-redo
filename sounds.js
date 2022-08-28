@@ -188,6 +188,8 @@ function displayNames() {
     const odyName = nameArray[index];
     const soundLink = soundArray[index];
     var button = document.createElement("button");
+    var waveholder = document.createElement("div");
+    waveholder.setAttribute("class", "waveholder");
     button.setAttribute("id", odyName);
     button.classList.add("buttonStyle");
     button.textContent = odyName;
@@ -195,6 +197,7 @@ function displayNames() {
       buttonClick(soundLink, odyName);
     };
     button.setAttribute("data-index", index);
+    button.appendChild(waveholder);
     nameList.appendChild(button);
     console.log(odyName);
   }
@@ -210,14 +213,15 @@ function buttonClick(soundUrl, buttonName) {
   }
 
   let wavesurfer = WaveSurfer.create({
-    container: document.querySelector(`#${buttonName}`),
+    container: document.querySelector(`#${buttonName} .waveholder`),
+    height: 80,
     barWidth: 3,
     barHeight: 2,
     barGap: null,
   });
 
   wavesurfer.on("finish", function () {
-    //wavesurfer.destroy();
+    wavesurfer.destroy();
   });
 
   wavesurfer.on("ready", function () {
