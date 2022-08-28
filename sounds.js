@@ -207,6 +207,10 @@ function displayNames() {
 
 function buttonClick(soundUrl, buttonName) {
   // var a = new Audio(soundUrl);
+
+  console.log(`#${buttonName}`);
+  document.querySelector(`#${buttonName}`).classList.add('playing');
+
   if (currentWaveSurfer) {
     currentWaveSurfer.destroy();
     document.querySelector("wave")?.remove();
@@ -218,9 +222,11 @@ function buttonClick(soundUrl, buttonName) {
     barWidth: 3,
     barHeight: 2,
     barGap: null,
+    progressColor: 'black',
   });
 
   wavesurfer.on("finish", function () {
+    document.querySelector(`#${buttonName}`).classList.remove("playing");
     wavesurfer.destroy();
   });
 

@@ -15,6 +15,13 @@ header {
   padding: 8px;
 }
 
+.title {
+  text-decoration: none;
+}
+
+.title a {
+  text-decoration: none;
+}
 
 @font-face { 
   font-family: 'Darcy';
@@ -24,7 +31,7 @@ header {
 }
 
 body {
-  font-family: 'Darcy', Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   font-size: 16px;
   letter-spacing: 0em;
   line-height: 1.6em;
@@ -33,6 +40,8 @@ body {
   font-size: 22px;
   letter-spacing: .025em;
   line-height: 2.2em;
+  overflow-x: hidden;
+  position: relative;
   text-transform: none;
   color: #000014;
   margin: 0px;
@@ -78,10 +87,7 @@ font-style: normal;
 line-height: .9em;
 text-transform: uppercase;            
 text-align: center;
-white-space: pre-wrap;
 text-transform: uppercase;
-text-decoration: underline;
-text-underline-position: under;
 text-decoration-thickness: 1px;
 font-size: 85px;
 }
@@ -106,6 +112,15 @@ h3 {
     white-space: pre-wrap;
       color: #000;
               padding-bottom: 17px;
+}
+
+ul h2 {
+  font-family: 'Darcy', sans-serif;
+
+}
+
+p {
+  font-family: proxima-nova, sans-serif;
 }
 
 #leafIcon{
@@ -193,19 +208,62 @@ width: 100%;
 }
 
 .buttonStyle {
+  border: none;
   display: block;
   width: 100%;
+  max-width: 75vw;
   height: 80px;
   margin-bottom: 20px;
   position: relative;
-  background-color: rgb(255, 212, 102);
-  font-weight: bold;
+  background-color: #ddb38591;
+  font-weight: normal;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1.5em;
+  color: rgb(48, 48, 48);
+  cursor: pointer;
+  transition: color ease-in-out 0.5s;
+}
+
+.buttonStyle:hover {
+  background-color: #b9916691;
+}
+
+.buttonStyle.playing {
+  color: rgba(54, 54, 54, 0.121);
+  border: 1px solid black;
 }
 
 #nameList {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.wave-container {
+  overflow: hidden;
+  zoom: 2;
+}
+
+.waves {
+  position: absolute;
+  bottom: 0;
+  animation: myOrbit 4s alternate-reverse infinite;
+}
+
+.waves.one {
+  left: 0;
+  margin-left: -36.1px;
+}
+
+.waves.two {
+  right: 0;
+  margin-right: -36.1px;
+
+}
+
+
+
+@keyframes myOrbit {
+  from { transform: rotate(0deg) translateX(10px) rotate(0deg); }
+  to   { transform: rotate(0deg) translateX(-10px) rotate(0deg); }
 }
