@@ -25,7 +25,7 @@ header {
 
 @font-face { 
   font-family: 'Darcy';
-  src: url('public/fonts/mrdarcy.woff') format('woff');
+  src: url('./public/fonts/mrdarcy.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -46,7 +46,7 @@ body {
   color: #000014;
   margin: 0px;
   text-align: center;
-  background-image: url('public/images/paperbackground.png');
+  background-image: url('./public/images/paperbackground.png');
 }
 
 .toppage {
