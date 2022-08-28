@@ -186,6 +186,10 @@ function displayNames() {
   }
   for (let index = 0; index < nameArray.length; index++) {
     const odyName = nameArray[index];
+    const firstLetter = odyName.charAt(0);
+    const sectionTarget = document.querySelector(
+      `.sectionedName${firstLetter}`
+    );
     const soundLink = soundArray[index];
     var button = document.createElement("button");
     var waveholder = document.createElement("div");
@@ -198,18 +202,17 @@ function displayNames() {
     };
     button.setAttribute("data-index", index);
     button.appendChild(waveholder);
-    nameList.appendChild(button);
+    // nameList.appendChild(button);
+    sectionTarget.after(button);
     console.log(odyName);
   }
 }
-//need anchor links for a-c c-i i-p p-z
-//for loop needs to put buttons in right sections
 
 function buttonClick(soundUrl, buttonName) {
   // var a = new Audio(soundUrl);
 
   console.log(`#${buttonName}`);
-  document.querySelector(`#${buttonName}`).classList.add('playing');
+  document.querySelector(`#${buttonName}`).classList.add("playing");
 
   if (currentWaveSurfer) {
     currentWaveSurfer.destroy();
@@ -222,7 +225,7 @@ function buttonClick(soundUrl, buttonName) {
     barWidth: 3,
     barHeight: 2,
     barGap: null,
-    progressColor: 'black',
+    progressColor: "black",
   });
 
   wavesurfer.on("finish", function () {

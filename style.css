@@ -222,10 +222,17 @@ width: 100%;
   color: rgb(48, 48, 48);
   cursor: pointer;
   transition: color ease-in-out 0.5s;
+  background-image: linear-gradient(dodgerblue, dodgerblue);
+    background-size: 0 3px, auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: all .2s ease-out;
 }
 
 .buttonStyle:hover {
   background-color: #b9916691;
+  background-size: 100% 3px, auto;
+    cursor: pointer;
 }
 
 .buttonStyle.playing {
@@ -241,10 +248,9 @@ width: 100%;
 
 .wave-container {
   overflow: hidden;
-  zoom: 2;
 }
 
-.waves {
+/* .waves {
   position: absolute;
   bottom: 0;
   animation: myOrbit 4s alternate-reverse infinite;
@@ -252,12 +258,12 @@ width: 100%;
 
 .waves.one {
   left: 0;
-  margin-left: -36.1px;
+  
 }
 
 .waves.two {
   right: 0;
-  margin-right: -36.1px;
+  
 
 }
 
@@ -266,4 +272,4 @@ width: 100%;
 @keyframes myOrbit {
   from { transform: rotate(0deg) translateX(10px) rotate(0deg); }
   to   { transform: rotate(0deg) translateX(-10px) rotate(0deg); }
-}
+} */
