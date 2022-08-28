@@ -188,7 +188,7 @@ function displayNames() {
     const odyName = nameArray[index];
     const firstLetter = odyName.charAt(0);
     const sectionTarget = document.querySelector(
-      `.sectionedName${firstLetter}`
+      `#sectionedName${firstLetter}`
     );
     const soundLink = soundArray[index];
     var button = document.createElement("button");
@@ -202,8 +202,7 @@ function displayNames() {
     };
     button.setAttribute("data-index", index);
     button.appendChild(waveholder);
-    // nameList.appendChild(button);
-    sectionTarget.after(button);
+    sectionTarget.appendChild(button);
     console.log(odyName);
   }
 }
@@ -225,7 +224,7 @@ function buttonClick(soundUrl, buttonName) {
     barWidth: 3,
     barHeight: 2,
     barGap: null,
-    progressColor: "black",
+    progressColor: "blue",
   });
 
   wavesurfer.on("finish", function () {

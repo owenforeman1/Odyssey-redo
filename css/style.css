@@ -73,7 +73,7 @@ border: 50px solid #abb9e8;
     padding-bottom: 60px;
     padding-left: 20px;
     padding-right: 20px;
-    
+    max-width: 1000px;
 }
 
 .pagetwo ul {
@@ -161,10 +161,6 @@ h1 a:hover{
   cursor: pointer;
 }
 
-h2 a:hover {
-  
-}
-
 h2 a:visited{
   background-color: rgb(25, 0, 255);
   color: inherit;
@@ -222,11 +218,15 @@ width: 100%;
   color: rgb(48, 48, 48);
   cursor: pointer;
   transition: color ease-in-out 0.5s;
-  background-image: linear-gradient(dodgerblue, dodgerblue);
+  background-image: linear-gradient(#abb9e8, #abb9e8);
     background-size: 0 3px, auto;
     background-repeat: no-repeat;
     background-position: center bottom;
-    transition: all .2s ease-out;
+    transition: all .7s ease-out;
+}
+
+.buttonSize{
+  width: 100%;
 }
 
 .buttonStyle:hover {
@@ -246,30 +246,19 @@ width: 100%;
   align-items: center;
 }
 
-.wave-container {
-  overflow: hidden;
+#backToTop p{
+opacity: 0;
+margin: 0;
 }
-
-/* .waves {
-  position: absolute;
-  bottom: 0;
-  animation: myOrbit 4s alternate-reverse infinite;
+#backToTop:hover p {
+  transition: all .7s ease-out;
+  transform: translateY(-100px);
+  opacity: 1;
+  animation: myOrbit 1s alternate-reverse infinite;
 }
-
-.waves.one {
-  left: 0;
-  
-}
-
-.waves.two {
-  right: 0;
-  
-
-}
-
 
 
 @keyframes myOrbit {
-  from { transform: rotate(0deg) translateX(10px) rotate(0deg); }
-  to   { transform: rotate(0deg) translateX(-10px) rotate(0deg); }
-} */
+  from { transform: rotate(0deg) translateY(10px) rotate(0deg); }
+  to   { transform: rotate(0deg) translateY(-10px) rotate(0deg); }
+} 
