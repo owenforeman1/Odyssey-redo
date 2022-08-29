@@ -1,4 +1,4 @@
-# Odyssy-redo
+# Odyssey-redo
 
 Links to existing pages
 
